@@ -10,7 +10,7 @@ Hero's Makerspace is a personal project aimed at sharing my journey as a multidi
 
 Visit [Hero's Makerspace](https://www.herosmakerspace.com) to explore the latest updates, blog posts, and projects.
 
-## Features
+## Features inwork
 
 - Embedded Medium blog posts
 - Personal projects showcase

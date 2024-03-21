@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero's Makerspace</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,12 @@
     </header>
 
     <nav>
-        <!-- Navigation links -->
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="resources.html">Resources</a>
+        <a href="knowledge-base.html">Knowledge Base</a>
     </nav>
 
     <main>
@@ -23,18 +28,24 @@
 
         <section id="projects">
             <h2>Projects Portfolio</h2>
-            <!-- Showcase project/repos/posts? -->
+            <div class="project-thumbnail" onclick="loadProjectDetails('project1.html')">Project 1</div>
+            <div class="project-thumbnail" onclick="loadProjectDetails('project2.html')">Project 2</div>
+            <!-- Add more project thumbnails as needed -->
         </section>
 
         <section id="blog">
             <h2>Blog</h2>
+            <p>Coming Soon</p>
             <!-- Embedded Medium blog posts, youtube videos etc -->
         </section>
 
-
         <section id="contact">
             <h2>Contact Me</h2>
-            <!-- Provide contact information -->
+            <p>You can reach me through the following:</p>
+            <ul>
+                <li><a href="http://www.CharlesCBostwick.com" target="_blank">My Website</a></li>
+                <li><a href="https://www.LinkedIn.com/in/CharlesBostwick" target="_blank">LinkedIn</a></li>
+            </ul>
         </section>
 
         <section id="resources">
@@ -45,7 +56,8 @@
 
     <footer>
         <p>&copy; 2024 Hero's Makerspace. All rights reserved.</p>
-        <!-- Footer links to be added later....c. -->
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

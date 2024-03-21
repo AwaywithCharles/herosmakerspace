@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero's Makerspace - Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="resources.html">Resources</a>
+        <a href="knowledge-base.html">Knowledge Base</a>
+    </nav>
+
+    <main id="blog-posts">
+        <!-- Blog posts will be dynamically loaded here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hero's Makerspace. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Fetch and display blog posts from Medium profile
+        fetch('https://charlesbostwick.medium.com/?format=rss')
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(data, 'application/xml');
+                const items = xml.querySelectorAll('item');
+
+                const blogPostsContainer = document.getElementById('blog-posts');
+
+                items.forEach(item => {
+                    const title = item.querySelector('title').textContent;
+                    const link = item.querySelector('link').textContent;
+                    const description = item.querySelector('description').textContent;
+
+                    const postElement = document.createElement('div');
+                    postElement.innerHTML = `
+                        <article>
+                            <h2><a href="${link}" target="_blank">${title}</a></h2>
+                            <p>${description}</p>
+                        </article>
+                    `;
+                    blogPostsContainer.appendChild(postElement);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching blog posts:', error);
+            });
+    </script>
+</body>
+</html>

@@ -10,13 +10,16 @@ function loadProjectDetails(projectURL) {
         });
 }
 
-// Function to handle smooth scrolling when clicking on navigation links
+// Updated Function to handle smooth scrolling for on-page anchors and allow normal navigation for other links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        // Check if the link is an on-page anchor
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault(); // Prevent default only for on-page anchors
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
 

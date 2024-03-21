@@ -55,3 +55,34 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Navigation Styles */
+nav {
+    background-color: #007bff; /* Change background color to a marketing-friendly color */
+    padding: 10px 0; /* Add padding to the top and bottom of the navigation bar */
+    text-align: center; /* Center-align the navigation links */
+}
+
+nav a {
+    color: #fff; /* Set link color to white for better contrast */
+    text-decoration: none;
+    margin: 0 10px; /* Add horizontal margin between navigation links */
+    font-size: 18px; /* Increase font size for better readability */
+    transition: color 0.3s; /* Add smooth transition effect for link color */
+}
+
+nav a:hover {
+    color: #ffd700; /* Change link color on hover to a brighter color */
+}
+
+/* Responsive Navigation Styles */
+@media only screen and (max-width: 768px) {
+    nav {
+        display: flex; /* Use flexbox layout for better responsiveness */
+        flex-direction: column; /* Stack navigation links vertically on small screens */
+    }
+    
+    nav a {
+        margin: 10px 0; /* Add vertical margin between navigation links */
+    }
+}

@@ -15,7 +15,9 @@ Visit [Hero's Makerspace](https://www.herosmakerspace.com) to explore the latest
 - Embedded Medium blog posts
 - Personal projects showcase
 - Interactive content related to tech, travel, tinkering, and more
-
+- Free knowledge on various topics of math, science, and engineering.
+- Procedural generation for learning exercises/practice tests and gamified learning adventures.
+- 
 ## Get Involved
 
 If you're interested in collaboration, have feedback, or want to connect, feel free to reach out.
